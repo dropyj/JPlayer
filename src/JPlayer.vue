@@ -3,6 +3,7 @@
 </template>
 
 <script>
+
 export default {
   name: "JPlayer",
   props: {
@@ -42,7 +43,7 @@ export default {
     };
   },
   mounted() {
-    this.loadScript("./jsmpeg.min.js", this.init);
+    this.loadScript("https://pic.my4399.com/re/cms/feUtil/jsmpeg/jsmpeg.min.js", this.init);
   },
   methods: {
     loadScript(url, cb) {
@@ -54,7 +55,7 @@ export default {
       // script 加载完毕后调用方法
       script.onload = script.onreadystatechange = function () {
         if (
-          !this.readyState || //这是FF的判断语句，因为ff下没有readyState这个值，IE的readyState肯定有值
+          !this.readyState || 
           this.readyState == "loaded" ||
           this.readyState == "complete" // 这是IE的判断语句
         ) {

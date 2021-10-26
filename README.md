@@ -63,3 +63,14 @@ The event of the jplayer element:
 - `.volume` – get or set the audio volume (0-1)
 - `.currentTime` – get or set the current playback position in seconds
 - `.paused` – read only, wether playback is paused
+
+
+
+## .ts 文件转换方式
+
+工具：ffmpeg安装完成
+命令：
+```
+ffmpeg -i in.mp4 -f mpegts -codec:v mpeg1video -codec:a mp2 -b 0 out.ts
+```
+
